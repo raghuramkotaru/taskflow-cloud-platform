@@ -35,9 +35,8 @@ variable "db_username" {
 }
 
 variable "db_password" {
-  description = "Master password for RDS and DocumentDB (supply via TF_VAR or a secret manager in real use)"
+  description = "Master password for RDS and DocumentDB. No default on purpose - supply via TF_VAR_db_password or a secret manager (e.g. AWS Secrets Manager / SSM Parameter Store) at apply time."
   type        = string
-  default     = "ChangeMe_InProd123"
   sensitive   = true
 }
 
