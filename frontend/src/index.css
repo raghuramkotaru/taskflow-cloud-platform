@@ -1,0 +1,99 @@
+:root {
+  font-family: system-ui, -apple-system, sans-serif;
+  color: #1f2933;
+  background: #f5f7fa;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.app-header {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 1rem 2rem;
+  background: #1f2933;
+  color: #fff;
+}
+
+.brand {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+}
+
+.tagline {
+  font-size: 0.85rem;
+  color: #cbd2d9;
+}
+
+.app-main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #e4e7eb;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.task-card {
+  border-left: 4px solid #3e8ed0;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  padding: 0.4rem 0.8rem;
+  background: #3e8ed0;
+  color: #fff;
+  font-size: 0.85rem;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #cbd2d9;
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+  font-family: inherit;
+}
+
+.status {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: #52606d;
+}
+
+.suggestion {
+  margin-top: 0.5rem;
+  background: #eff6ff;
+  border-radius: 6px;
+  padding: 0.5rem;
+  font-size: 0.85rem;
+}
+
+.error {
+  color: #b91c1c;
+}
+
+a {
+  color: #3e8ed0;
+}

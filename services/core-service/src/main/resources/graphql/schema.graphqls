@@ -1,0 +1,47 @@
+scalar Long
+scalar Instant
+
+type Query {
+    boards: [Board!]!
+    board(id: ID!): Board
+    task(id: ID!): Task
+}
+
+type Mutation {
+    createTask(boardId: ID!, title: String!, description: String): Task!
+}
+
+type Board {
+    id: ID!
+    name: String!
+    description: String
+    ownerId: Long!
+    createdAt: Instant!
+    tasks: [Task!]!
+}
+
+type Task {
+    id: ID!
+    title: String!
+    description: String
+    status: TaskStatus!
+    priority: Int!
+    boardId: Long!
+    assigneeId: Long
+    createdAt: Instant!
+    comments: [Comment!]!
+}
+
+type Comment {
+    id: ID!
+    body: String!
+    authorId: Long!
+    taskId: Long!
+    createdAt: Instant!
+}
+
+enum TaskStatus {
+    TODO
+    IN_PROGRESS
+    DONE
+}
